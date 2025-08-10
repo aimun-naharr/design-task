@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #ffffff;
+  --color-dark: #262626;
+  --color-banana: #feedbc;
+  --color-orange: #f9b800;
+}
+body {
+  background-color: var(--color-banana);
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
