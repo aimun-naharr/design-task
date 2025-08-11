@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "../lib/utils";
 
 const buttonVariants = cva(
-  "rounded-full px-8 py-2 font-semibold flex items-center justify-between group cursor-pointer",
+  "rounded-full px-8 py-3 font-semibold flex items-center justify-between group cursor-pointer ",
   {
     variants: {
       variant: {

@@ -13,13 +13,13 @@ const Hero = () => {
     "Mauris Fermentum Praesent",
   ];
   return (
-    <div className="container flex md:flex-row flex-col items-center md:justify-between justify-center">
+    <div className="container flex md:flex-row flex-col-reverse items-center md:justify-between justify-center py-10 md:py-0">
       {/* left */}
       <div className="md:pl-20 ">
         <h3 className="uppercase text-orange font-bold text-lg">
           risus praesent vulputate.{" "}
         </h3>
-        <div className="text-6xl font-bold tracking-tight">
+        <div className="md:text-6xl text-3xl font-bold tracking-tight">
           <h2>Cursus Integer</h2>
           <h2>Consequat Tristique.</h2>
         </div>
@@ -28,10 +28,7 @@ const Hero = () => {
             <Tag key={tag} tag={tag} />
           ))}
         </div>
-        <Button
-          className={"justify-between w-56"}
-          icon={<MoveRight size={18} />}
-        >
+        <Button className={" md:w-56 w-full"} icon={<MoveRight size={18} />}>
           <span>Lorem ipsum </span>
         </Button>
       </div>
