@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import { MoveRight } from "lucide-react";
 import { cn } from "../../lib/utils";
+import Thought from "./Thought";
 
 const ServiceCard = ({ service, i }) => {
   return (
@@ -63,37 +64,44 @@ export default function Services() {
     },
   ];
   return (
-    <section className="  bg-dark py-[20rem] service-section">
-      <div className="flex flex-col md:flex-row items-center justify-center container md:justify-between">
-        {/* left */}
-        <div className="max-w-[550px] flex flex-col gap-2">
-          <p className="text-orange text-sm font-light">
-            Quisque porttitor vitae vel amet neque scelerisque mattis.
-            Consectetur nibh velit magna consectetur leo.{" "}
-          </p>
-          <div className="text-4xl font-bold text-white">
-            <h3>Cursus Integer Conseq </h3>
-            <h3>Aliquam Tristique.</h3>
+    <section className="  relative  ">
+      <div className="  pt-[20rem] py-[30rem] bg-dark  service-section">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between ">
+            {/* left */}
+            <div className="max-w-[550px] flex flex-col gap-2">
+              <p className="text-orange text-sm font-light">
+                Quisque porttitor vitae vel amet neque scelerisque mattis.
+                Consectetur nibh velit magna consectetur leo.{" "}
+              </p>
+              <div className="text-4xl font-bold text-white">
+                <h3>Cursus Integer Conseq </h3>
+                <h3>Aliquam Tristique.</h3>
+              </div>
+              <Button
+                className={"w-56 mt-8"}
+                variant="secondary"
+                icon={<MoveRight size={18} />}
+              >
+                Lorem Ipsum
+              </Button>
+            </div>
+            {/* right */}
+            <div className="flex flex-col md:flex-row gap-10 ">
+              <div className="flex flex-col gap-10">
+                <ServiceCard service={services[0]} i={0} />
+                <ServiceCard service={services[2]} i={2} />
+              </div>
+              <div className="flex flex-col gap-10 mt-20">
+                <ServiceCard service={services[1]} i={1} />
+                <ServiceCard service={services[3]} i={3} />
+              </div>
+            </div>
           </div>
-          <Button
-            className={"w-56 mt-8"}
-            variant="secondary"
-            icon={<MoveRight size={18} />}
-          >
-            Lorem Ipsum
-          </Button>
         </div>
-        {/* right */}
-        <div className="flex flex-col md:flex-row gap-10">
-          <div className="flex flex-col gap-10">
-            <ServiceCard service={services[0]} i={0} />
-            <ServiceCard service={services[2]} i={2} />
-          </div>
-          <div className="flex flex-col gap-10 mt-20">
-            <ServiceCard service={services[1]} i={1} />
-            <ServiceCard service={services[3]} i={3} />
-          </div>
-        </div>
+      </div>
+      <div className="absolute -bottom-10 z-[10] left-1/2 -translate-x-1/2 md:w-[1280px]">
+        <Thought />
       </div>
     </section>
   );
