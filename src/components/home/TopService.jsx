@@ -14,11 +14,11 @@ export default function TopService() {
     "Vulputate et vulputate suspendisse",
   ];
   return (
-    <div className="bg-orange custom-clip-path py-[10rem] relative  ">
-      <div className="container flex flex-col md:flex-row items-center justify-between px-20">
+    <div className="bg-orange md:custom-clip-path-md custom-clip-path-xs md:py-[10rem] py-[12rem] relative  ">
+      <div className="container flex flex-col-reverse md:flex-row items-center justify-between px-2 md:px-20">
         {/* left */}
         <div className="flex flex-col gap-10">
-          <div className="text-5xl font-bold">
+          <div className="md:text-5xl text-3xl font-bold">
             <h1>Cursus Integer</h1>
             <h1>Consequat Tristique.</h1>
           </div>
@@ -29,7 +29,7 @@ export default function TopService() {
           </div>
           <div>
             <Button
-              className="w-56"
+              className="md:w-56 w-full"
               variant="dark"
               icon={<MoveRight size={18} />}
             >
@@ -38,7 +38,7 @@ export default function TopService() {
           </div>
         </div>
         {/* right */}
-        <div>
+        <div className="max-w-[614px] w-full mt-10 sm:mt-0">
           <img src={topService} alt="top-service" />
         </div>
       </div>

@@ -18,6 +18,9 @@ img {
   height: 100%;
 }
 
-.custom-clip-path {
+.custom-clip-path-md {
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+}
+.custom-clip-path-xs {
+  clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
 }
