@@ -14,7 +14,7 @@ export default function TopService() {
     "Vulputate et vulputate suspendisse",
   ];
   return (
-    <div className="bg-orange custom-clip-path md:pt-[10rem] md:pb-[20rem] py-[12rem] relative  ">
+    <div className="bg-orange custom-clip-path md:pt-[10rem] md:pb-[25rem] py-[12rem] relative  ">
       <div className="container flex flex-col-reverse md:flex-row items-center justify-between px-2 md:px-20">
         {/* left */}
         <div className="flex flex-col gap-10">
