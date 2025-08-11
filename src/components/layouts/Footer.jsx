@@ -12,11 +12,7 @@ export default function Footer() {
             <h2>Suspendisse tellus consectetur</h2>
           </div>
           <div>
-            <Button
-              className="w-56"
-              variant="dark"
-              icon={<MoveRight size={18} />}
-            >
+            <Button className="w-56" icon={<MoveRight size={18} />}>
               Lorem ipsum
             </Button>
           </div>
