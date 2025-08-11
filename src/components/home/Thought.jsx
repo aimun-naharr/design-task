@@ -9,15 +9,15 @@ export default function Thought() {
         <img src={avatar} alt="avatar" className="object-cover" />
       </div>
       <div className="flex flex-col gap-6 flex-grow ">
-        <h3 className=" md:text-4xl text-2xl md:text-left text-center font-bold">
+        <h3 className=" md:text-4xl text-2xl sm:text-left text-center font-bold">
           What our customers thought?
         </h3>
         <div className="flex flex-col gap-4">
-          <p className=" md:text-xl text-sm font-light md:text-left text-center">
+          <p className=" md:text-xl text-sm font-light sm:text-left text-center">
             Euismod magna id purus eget nunc ligula suspendisse dui netus.
             Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.{" "}
           </p>
-          <h4 className=" font-semibold text-center md:text-left">
+          <h4 className=" font-semibold text-center sm:text-left">
             Holly Davidson
           </h4>
           <div className="flex gap-4 mt-2 items-center justify-center md:justify-start">

@@ -4,15 +4,16 @@ import { MoveRight } from "lucide-react";
 import { cn } from "../../lib/utils";
 import Thought from "./Thought";
 
-const ServiceCard = ({ service, i }) => {
+const ServiceCard = ({ service, i, isPrimary = true }) => {
   return (
     <div
       key={service.title}
       className={cn(
-        "flex flex-col gap-4 p-10 rounded-4xl max-w-[345px] w-full mt-0",
+        "flex flex-col gap-4 p-10 rounded-4xl md:max-w-[325px]  w-full mt-0",
         {
-          "bg-white": i === 0 || i === 3,
-          "bg-orange": i === 1 || i === 2,
+          "bg-white": isPrimary,
+          "bg-orange": !isPrimary,
+          "mb-8  lg:mb-0": i === 3,
         }
       )}
     >
@@ -68,11 +69,11 @@ export default function Services() {
   ];
   return (
     <section className="  relative  ">
-      <div className="pt-[10rem] py-[30rem]  md:pt-[20rem] md:py-[30rem] bg-dark  md:custom-clip-path-md custom-clip-path-xs">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between gap-8">
+      <div className="pt-[10rem] py-[30rem]  md:pt-[20rem] md:py-[30rem] bg-dark  custom-clip-path">
+        <div className="container  w-full">
+          <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between gap-8 md:gap-0 w-full ">
             {/* left */}
-            <div className="max-w-[550px] flex flex-col gap-2">
+            <div className="max-w-[550px] flex flex-col gap-2 w-full">
               <p className="text-orange text-sm font-light">
                 Quisque porttitor vitae vel amet neque scelerisque mattis.
                 Consectetur nibh velit magna consectetur leo.{" "}
@@ -90,15 +91,21 @@ export default function Services() {
               </Button>
             </div>
             {/* right */}
-            <div className="flex flex-col sm:flex-row md:gap-10 gap-4 w-full">
-              <div className="flex flex-col md:gap-10 gap-4">
-                <ServiceCard service={services[0]} i={0} />
-                <ServiceCard service={services[2]} i={2} />
+            <div className="sm:flex flex-wrap md:flex-nowrap md:flex-row lg:gap-10 sm:gap-6 gap-4 w-full   lg:justify-end hidden">
+              <div className="flex flex-col lg:gap-10 sm:gap-6 gap-4 w-full md:w-auto">
+                <ServiceCard service={services[0]} i={0} isPrimary={true} />
+                <ServiceCard service={services[2]} i={2} isPrimary={false} />
               </div>
-              <div className="flex flex-col md:gap-10 gap-4 md:mt-20 mt-0">
-                <ServiceCard service={services[1]} i={1} />
-                <ServiceCard service={services[3]} i={3} />
+              <div className="flex md:flex-col flex-col-reverse lg:gap-10 sm:gap-6 gap-4 md:mt-20 mt-0 w-full md:w-auto">
+                <ServiceCard service={services[1]} i={1} isPrimary={false} />
+                <ServiceCard service={services[3]} i={3} isPrimary={true} />
               </div>
+            </div>
+            <div className="sm:hidden flex flex-col gap-4 w-full">
+              <ServiceCard service={services[0]} i={0} isPrimary={true} />
+              <ServiceCard service={services[1]} i={1} isPrimary={false} />
+              <ServiceCard service={services[2]} i={2} isPrimary={true} />
+              <ServiceCard service={services[3]} i={3} isPrimary={false} />
             </div>
           </div>
         </div>

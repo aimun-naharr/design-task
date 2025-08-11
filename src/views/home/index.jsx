@@ -9,7 +9,7 @@ const HomePage = () => {
     <main className="">
       <Hero />
       <div className="relative">
-        <div className="absolute w-full h-[50rem] bg-orange top-2/3 -translate-y-1/2 left-0"></div>
+        <div className="absolute w-full h-[70rem] bg-orange top-1/2 -translate-y-1/2 left-0  "></div>
         <Services />
         <TopService />
       </div>
