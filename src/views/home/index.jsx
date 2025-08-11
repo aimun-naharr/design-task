@@ -9,7 +9,7 @@ const HomePage = () => {
     <main className="">
       <Hero />
       <div className="relative">
-        <div className="absolute w-full h-[70rem] bg-orange top-1/2 -translate-y-1/2 left-0  "></div>
+        <div className="absolute w-full h-full bg-orange top-0 left-0 custom-clip-path "></div>
         <Services />
         <TopService />
       </div>
