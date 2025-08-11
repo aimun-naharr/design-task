@@ -10,6 +10,7 @@ const buttonVariants = cva(
         primary: "bg-orange text-white",
         secondary: "bg-white ",
         default: "bg-orange ",
+        dark: "bg-dark text-white",
       },
     },
   }

@@ -65,7 +65,7 @@ export default function Services() {
   ];
   return (
     <section className="  relative  ">
-      <div className="  pt-[20rem] py-[30rem] bg-dark  service-section">
+      <div className="  pt-[20rem] py-[30rem] bg-dark  custom-clip-path">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between ">
             {/* left */}
@@ -74,7 +74,7 @@ export default function Services() {
                 Quisque porttitor vitae vel amet neque scelerisque mattis.
                 Consectetur nibh velit magna consectetur leo.{" "}
               </p>
-              <div className="text-4xl font-bold text-white">
+              <div className="text-5xl font-bold text-white">
                 <h3>Cursus Integer Conseq </h3>
                 <h3>Aliquam Tristique.</h3>
               </div>
@@ -100,7 +100,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-10 z-[10] left-1/2 -translate-x-1/2 md:w-[1280px]">
+      <div className="absolute -bottom-10 z-[10] left-1/2 -translate-x-1/2 lg:w-[1280px] w-full">
         <Thought />
       </div>
     </section>

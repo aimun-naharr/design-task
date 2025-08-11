@@ -1,17 +1,7 @@
 import { CircleCheckBig, MoveRight } from "lucide-react";
 import React from "react";
 import Button from "../Button";
-
-const Tag = ({ tag }) => {
-  return (
-    <div className="bg-white px-4 py-2 rounded-full flex gap-2 items-center">
-      <span className="text-orange">
-        <CircleCheckBig size={16} />
-      </span>
-      <span>{tag}</span>
-    </div>
-  );
-};
+import Tag from "../Tag";
 
 const Hero = () => {
   const tags = [
