@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-orange text-white",
-        secondary: "bg-white text-orange",
+        secondary: "bg-white ",
         default: "bg-orange ",
       },
     },
