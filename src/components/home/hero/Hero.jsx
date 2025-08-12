@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import React from "react";
 import Button from "../../Button";
 import Tag from "../../Tag";
-import HeroVector from "./heroVector";
+import HeroVector from "./HeroVector";
 
 const Hero = () => {
   const tags = [
