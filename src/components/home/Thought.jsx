@@ -10,15 +10,15 @@ export default function Thought() {
       className="container flex flex-col sm:flex-row items-center justify-center bg-white relative  gap-10 py-8 md:py-16 px-6 md:px-20 rounded-4xl thought-section w-full overflow-hidden z-[2]"
     >
       <motion.div
-        initial={{ y: "-100%" }}
-        whileInView={{ y: 0, type: spring, duration: 0.8, bounce: 0.8 }}
-        viewport={{ amount: 0.3 }}
+        initial={{ y: 0 }}
+        whileInView={{ y: 1, type: spring, duration: 0.8, bounce: 0.8 }}
+        viewport={{ amount: 0.5 }}
         className="absolute inset-0 w-full h-full z-[-1] scale-x-[1.1]"
       >
         <img
           src={avatar}
           alt="avatar"
-          className="object-cover opacity-[0.3]  grayscale"
+          className="object-cover opacity-[0.5]  grayscale"
         />
       </motion.div>
       {/* image */}
