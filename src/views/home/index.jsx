@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../../components/home/hero/Hero";
 import Services from "../../components/home/Services";
-import TopService from "../../components/home/TopService";
+import TopService from "../../components/home/top-service/TopService";
 import Footer from "../../components/layouts/Footer";
 
 const HomePage = () => {

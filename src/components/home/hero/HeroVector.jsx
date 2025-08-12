@@ -13,8 +13,8 @@ const HeroVector = () => {
   return (
     <div className="max-w-[614px] w-full">
       <svg
-        width="714"
-        height="714"
+        width="100%"
+        height="100%"
         viewBox="0 0 714 714"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -69,7 +69,16 @@ export const rotateRightAnim = {
     rotate: 0,
   },
   animate: {
-    rotate: "45deg",
+    rotate: "5deg",
+    transition: springTransition,
+  },
+};
+export const rotateLeftAnim = {
+  initial: {
+    rotate: 0,
+  },
+  animate: {
+    rotate: "-5deg",
     transition: springTransition,
   },
 };

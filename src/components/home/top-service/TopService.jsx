@@ -1,8 +1,8 @@
-import React from "react";
-import Tag from "../Tag";
-import Button from "../Button";
 import { MoveRight } from "lucide-react";
-import topService from "../../assets/topService.png";
+import React from "react";
+import Button from "../../Button";
+import Tag from "../../Tag";
+import TopServiceVector from "./TopServiceVector";
 
 export default function TopService() {
   const tags = [
@@ -38,9 +38,7 @@ export default function TopService() {
           </div>
         </div>
         {/* right */}
-        <div className="max-w-[614px] w-full mt-10 sm:mt-0">
-          <img src={topService} alt="top-service" />
-        </div>
+        <TopServiceVector />
       </div>
     </div>
   );
