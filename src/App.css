@@ -35,7 +35,7 @@ img {
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
-  border-right: 3px solid black; /* Cursor effect */
+  border-right: 6px solid black; /* Cursor effect */
   animation: blink 0.7s infinite;
 }
 

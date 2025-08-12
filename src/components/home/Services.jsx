@@ -9,7 +9,7 @@ const ServiceCard = ({ service, i, isPrimary = true }) => {
     <div
       key={service.title}
       className={cn(
-        "flex flex-col gap-4 p-10 rounded-4xl md:max-w-[325px] w-full mt-0 group relative " +
+        "flex flex-col gap-4 p-10 rounded-4xl md:max-w-[325px] w-full mt-0 group relative  " +
           "after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-dark after:z-[1] z-[2] " +
           "after:rounded-full after:scale-[1] after:translate-y-full after:transition-transform after:duration-500 after:ease-in border-dark border-2",
         "hover:after:translate-y-0 hover:after:scale-[3] group-hover:text-white overflow-hidden  hover:border-dark",
