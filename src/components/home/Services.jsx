@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "../Button";
 import { MoveRight } from "lucide-react";
+import React from "react";
 import { cn } from "../../lib/utils";
+import Button from "../Button";
 import Thought from "./Thought";
 
 const ServiceCard = ({ service, i, isPrimary = true }) => {
@@ -9,7 +9,10 @@ const ServiceCard = ({ service, i, isPrimary = true }) => {
     <div
       key={service.title}
       className={cn(
-        "flex flex-col gap-4 p-10 rounded-4xl md:max-w-[325px]  w-full mt-0",
+        "flex flex-col gap-4 p-10 rounded-4xl md:max-w-[325px] w-full mt-0 group relative " +
+          "after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-dark after:z-[1] z-[2] " +
+          "after:rounded-full after:scale-[1] after:translate-y-full after:transition-transform after:duration-500 after:ease-in border-dark border-2",
+        "hover:after:translate-y-0 hover:after:scale-[3] group-hover:text-white overflow-hidden  hover:border-dark",
         {
           "bg-white": isPrimary,
           "bg-orange": !isPrimary,
@@ -17,24 +20,30 @@ const ServiceCard = ({ service, i, isPrimary = true }) => {
         }
       )}
     >
-      <div className="w-8">
+      <div className="w-8 relative z-[2]">
         <img src={service.icon} alt={service.title} />
       </div>
-      <div className="text-5xl font-bold tracking-tighter flex gap-0.5">
-        <span className="">{i + 1}</span>{" "}
+      <div className="text-5xl font-bold tracking-tighter flex gap-0.5 relative z-[2]">
+        <span className="group-hover:text-white">{i + 1}</span>{" "}
         <span
           className={cn("text-orange ", {
-            "text-white": i === 1 || i === 2,
-            "text-orange": i === 0 || i === 3,
+            "text-white group-hover:text-white": i === 1 || i === 2,
+            "text-orange group-hover:text-white": i === 0 || i === 3,
           })}
         >
           .
         </span>
       </div>
-      <h4 className="text-xl font-bold">{service.title}</h4>
-      <div className="text-lg">
-        <p className=" font-semibold text-sm">{service.tag}</p>
-        <p className=" text-sm font-light">{service.description}</p>
+      <h4 className="text-xl font-bold relative z-[2] group-hover:text-white">
+        {service.title}
+      </h4>
+      <div className="text-lg relative z-[2] group-hover:text-white">
+        <p className=" font-semibold text-sm relative z-[2] group-hover:text-white">
+          {service.tag}
+        </p>
+        <p className=" text-sm font-light relative z-[2] group-hover:text-white">
+          {service.description}
+        </p>
       </div>
     </div>
   );

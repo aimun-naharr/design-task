@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../../components/home/Hero";
+import Hero from "../../components/home/hero/Hero";
 import Services from "../../components/home/Services";
 import TopService from "../../components/home/TopService";
 import Footer from "../../components/layouts/Footer";

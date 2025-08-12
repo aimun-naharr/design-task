@@ -1,7 +1,9 @@
-import { CircleCheckBig, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
+import { motion } from "motion/react";
 import React from "react";
-import Button from "../Button";
-import Tag from "../Tag";
+import Button from "../../Button";
+import Tag from "../../Tag";
+import HeroVector from "./heroVector";
 
 const Hero = () => {
   const tags = [
@@ -19,9 +21,23 @@ const Hero = () => {
         <h3 className="uppercase text-orange font-bold text-lg">
           risus praesent vulputate.{" "}
         </h3>
-        <div className="md:text-6xl text-3xl font-bold tracking-tight">
+        <div className="md:text-6xl text-3xl font-bold ">
           <h2>Cursus Integer</h2>
-          <h2>Consequat Tristique.</h2>
+          <h2 className="mt-2 flex gap-2">
+            Consequat
+            <motion.span
+              className="typing"
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              Tristique.
+            </motion.span>
+          </h2>
         </div>
         <div className="flex flex-wrap gap-2 py-8">
           {tags.map((tag) => (
@@ -33,9 +49,7 @@ const Hero = () => {
         </Button>
       </div>
       {/* right */}
-      <div className="max-w-[614px] w-full">
-        <img src={"/heroImg.svg"} alt="hero" className="object-cover" />
-      </div>
+      <HeroVector />
     </div>
   );
 };
